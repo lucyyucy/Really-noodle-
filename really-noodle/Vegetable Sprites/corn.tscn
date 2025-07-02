@@ -8,7 +8,7 @@ height = 79.2
 
 [node name="corn" type="Sprite2D"]
 position = Vector2(-76.9961, -57.0007)
-scale = Vector2(-189.038, 200)
+scale = Vector2(-0.945, 1)
 texture = ExtResource("1_qbyvj")
 
 [node name="Area2D" type="Area2D" parent="."]
