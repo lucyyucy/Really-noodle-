@@ -1,27 +1,25 @@
-<<<<<<< HEAD
-[gd_scene load_steps=3 format=3 uid="uid://cupc071sjfbm6"]
+[gd_scene load_steps=5 format=3 uid="uid://b271anid37eya"]
 
-[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="1_jqrxj"]
-[ext_resource type="PackedScene" uid="uid://csh5t7yf8gggy" path="res://playerplaceholder.tscn" id="2_3sepi"]
+[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
+[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_2be5f"]
+[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
 
-[node name="Game" type="Node2D"]
-
-[node name="chopsticks" parent="." instance=ExtResource("1_jqrxj")]
-position = Vector2(1478, -415)
-
-[node name="playerplaceholder" parent="." instance=ExtResource("2_3sepi")]
-position = Vector2(622, 554)
-=======
-[gd_scene load_steps=2 format=3 uid="uid://cupc071sjfbm6"]
-
-[ext_resource type="PackedScene" uid="uid://cuml4dhwphilt" path="res://Scenes/player.tscn" id="1_p8ecr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
+size = Vector2(1158.5, 20)
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_p8ecr")]
-position = Vector2(-5, 0)
+[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
+position = Vector2(206, 119)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2, -4)
-zoom = Vector2(4, 4)
->>>>>>> origin/Abiha
+[node name="carrot" parent="." instance=ExtResource("2_2be5f")]
+position = Vector2(294, 256)
+
+[node name="chopsticks" parent="." instance=ExtResource("3_kb68e")]
+position = Vector2(969, -161)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(582, 629)
+shape = SubResource("RectangleShape2D_gvftq")
