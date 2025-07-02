@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbdrjiqgbl7be"]
+
+[ext_resource type="Texture2D" uid="uid://c41u5osvno6lx" path="res://Vegetable Sprites/onion.png" id="1_28qdo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_voal7"]
+radius = 41.1947
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_28qdo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_voal7")

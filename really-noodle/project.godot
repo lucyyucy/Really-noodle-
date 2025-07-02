@@ -11,10 +11,16 @@ config_version=5
 [application]
 
 config/name="Really Noodle"
+
 run/main_scene="res://Scenes/player.tscn"
+
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [dotnet]
 
 project/assembly_name="Really Noodle"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
