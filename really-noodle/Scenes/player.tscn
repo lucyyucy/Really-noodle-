@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuml4dhwphilt"]
+
+[ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_d3o56"]
+[ext_resource type="Texture2D" uid="uid://b54cyc4igq0o3" path="res://Assets/Orc.png" id="2_61pwn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47cx4"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7hyq"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6r2m"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tel1"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(200, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gf5g"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(300, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wybw1"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(400, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glppr"]
+atlas = ExtResource("2_61pwn")
+region = Rect2(500, 200, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqile"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47cx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7hyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6r2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tel1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gf5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glppr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_d3o56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_kqile")
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+visible = false
+polygon = PackedVector2Array(-3, -15, 7, -15, 8, -11, 11, -8, 10, -3, 7, 0, 7, 3, 7, 6, 10, 6, 22, -7, 24, -5, 30, 0, 23, 7, 18, 2, 11, 8, 7, 12, -3, 12, -6, 6, -11, 5, -8, -7)
