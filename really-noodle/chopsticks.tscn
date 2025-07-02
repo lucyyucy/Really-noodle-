@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bruuyk3d8gfpx"]
+[gd_scene load_steps=6 format=3 uid="uid://bruuyk3d8gfpx"]
 
 [ext_resource type="Texture2D" uid="uid://dbfwqf2a2e4os" path="res://Sprites/ai-generated-bamboo-chopsticks-free-png.png" id="1_rqyhm"]
-[ext_resource type="Script" path="res://sprite_2d.gd" id="2_gdbhg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrb1d"]
 size = Vector2(1362.14, 47.507)
@@ -16,33 +15,34 @@ size = Vector2(38.4585, 1256.67)
 size = Vector2(1070.36, 40.8708)
 
 [node name="chopsticks" type="Node2D"]
+position = Vector2(-1, 2.38419e-07)
+rotation = -0.558944
+scale = Vector2(0.502057, 0.587654)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7, -2)
 texture = ExtResource("1_rqyhm")
-script = ExtResource("2_gdbhg")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(2, 2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="ChopstickCollision1" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(14.6266, 18.6571)
 rotation = -0.523599
 shape = SubResource("RectangleShape2D_nrb1d")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="ChopstickCollision2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(115.464, -19.9654)
 rotation = -2.0944
-scale = Vector2(1, 1)
 skew = 0.0366516
 shape = SubResource("RectangleShape2D_dtbbw")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+[node name="ChopstickCollision3" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-101.072, -47.8582)
 rotation = 0.98262
 shape = SubResource("RectangleShape2D_iyjs6")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+[node name="ChopstickCollision4" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-13.9767, -86.1187)
 rotation = -0.567232
 shape = SubResource("RectangleShape2D_lly8r")
