@@ -15,7 +15,7 @@ size = Vector2(1158.5, 20)
 
 [node name="Game" type="Node2D"]
 
-[node name="Sprite2D" parent="." instance=ExtResource("1_f7k3g")]
+[node name="soup" parent="." instance=ExtResource("1_f7k3g")]
 position = Vector2(580, 316)
 
 [node name="bowl" parent="." instance=ExtResource("1_fyqvd")]
