@@ -17,7 +17,6 @@ script = ExtResource("2_jusf8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.0901781, -27.1409)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5hlgl")
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
