@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjtf40vu2l6u6"]
+
+[sub_resource type="Theme" id="Theme_h7jq6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ceu4o"]
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="Theme" id="Theme_ianmk"]
+Label/styles/normal = SubResource("StyleBoxTexture_ceu4o")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wg23w"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_h7jq6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 643.0
+theme = SubResource("Theme_ianmk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Label"]
+material = SubResource("CanvasItemMaterial_wg23w")
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 695.0
+offset_bottom = 661.0
+text = "How to play:
+Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world"
+fit_content = true
