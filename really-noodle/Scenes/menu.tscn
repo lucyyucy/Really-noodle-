@@ -1,4 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjtf40vu2l6u6"]
+[gd_scene load_steps=12 format=3 uid="uid://bjtf40vu2l6u6"]
+
+[ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="1_0eyqb"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_hpgpy"]
+[ext_resource type="FontFile" uid="uid://b4sa3dughquqt" path="res://Assets/Font/ublogame-font/Ublogame-yYpj2.otf" id="2_1pi8i"]
+[ext_resource type="Texture2D" uid="uid://bobiul1ogu6nx" path="res://Assets/Backgrounds/really noodle background-12.png.png" id="4_roohe"]
 
 [sub_resource type="Theme" id="Theme_h7jq6"]
 
@@ -11,30 +16,95 @@ texture_margin_bottom = 4.0
 [sub_resource type="Theme" id="Theme_ianmk"]
 Label/styles/normal = SubResource("StyleBoxTexture_ceu4o")
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wg23w"]
+[sub_resource type="LabelSettings" id="LabelSettings_6503k"]
+font = ExtResource("2_1pi8i")
+font_size = 70
+font_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ibvsn"]
+font = ExtResource("2_1pi8i")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oswbh"]
+bg_color = Color(0.383496, 0.685441, 0.344894, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_3yatl"]
+Button/styles/normal = SubResource("StyleBoxFlat_oswbh")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 457.0
+offset_right = -1002.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_h7jq6")
+script = ExtResource("1_hpgpy")
 
-[node name="Label" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 643.0
+offset_left = 149.0
+offset_top = -313.0
+offset_right = 463.0
+offset_bottom = -73.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 theme = SubResource("Theme_ianmk")
+text = "How to play"
+label_settings = SubResource("LabelSettings_6503k")
+horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Label"]
-material = SubResource("CanvasItemMaterial_wg23w")
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ianmk")
+theme_override_font_sizes/font_size = 11
+text = "Aim of the game: "
+label_settings = SubResource("LabelSettings_ibvsn")
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+z_index = 2
 layout_mode = 0
-offset_left = 14.0
-offset_top = 22.0
-offset_right = 695.0
-offset_bottom = 661.0
-text = "How to play:
-Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world, Hello world, Hello world, Hello, world"
-fit_content = true
+offset_left = 593.0
+offset_top = -245.0
+offset_right = 726.0
+offset_bottom = -27.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Back_Button" type="Button" parent="VBoxContainer2"]
+z_index = 2
+layout_mode = 2
+theme = SubResource("Theme_3yatl")
+theme_override_fonts/font = ExtResource("1_0eyqb")
+text = "Go back"
+
+[node name="Exit_button" type="Button" parent="VBoxContainer2"]
+z_index = 2
+layout_mode = 2
+theme = SubResource("Theme_3yatl")
+theme_override_fonts/font = ExtResource("1_0eyqb")
+text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+layout_mode = 0
+offset_left = -151.0
+offset_top = -456.0
+offset_right = 1012.0
+offset_bottom = 209.0
+texture = ExtResource("4_roohe")
+
+[connection signal="pressed" from="VBoxContainer2/Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Exit_button" to="." method="_on_exit_button_pressed"]
