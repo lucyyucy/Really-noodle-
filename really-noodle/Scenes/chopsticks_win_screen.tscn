@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=3 uid="uid://b5km2tq6a3vy8"]
+
+[ext_resource type="Texture2D" uid="uid://dhr60j2uhfkbh" path="res://Assets/Backgrounds/chopsticks wins end screen.png" id="1_fwvvx"]
+[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="2_w66e1"]
+[ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="3_b4rr3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksfcu"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(0, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8erd"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(900, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jdpu"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(1800, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_extn4"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(0, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11b7a"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(900, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfe6y"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(1800, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx6ru"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(0, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfdlu"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(900, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e2v7"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(1800, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m1xq"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(0, 1620, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4pxl"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(900, 1620, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtdvs"]
+atlas = ExtResource("1_fwvvx")
+region = Rect2(1800, 1620, 900, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2keg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksfcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8erd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jdpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_extn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11b7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfe6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx6ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfdlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e2v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m1xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4pxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtdvs")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Chopsticks_win_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 568.0
+offset_top = 315.0
+offset_right = 568.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.26684, 1.15661)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.73619, 5.18762)
+scale = Vector2(1.01651, 1.04863)
+sprite_frames = SubResource("SpriteFrames_2keg8")
+autoplay = "default"
+frame = 11
+frame_progress = 1.0
+
+[node name="Control" parent="." instance=ExtResource("2_w66e1")]
+layout_mode = 1
+offset_left = -512.0
+offset_top = -9.0
+offset_right = -512.0
+offset_bottom = -9.0
+
+[node name="Go back" parent="." instance=ExtResource("3_b4rr3")]
+layout_mode = 1
+offset_left = 168.0
+offset_top = 118.0
+offset_right = 168.0
+offset_bottom = 118.0

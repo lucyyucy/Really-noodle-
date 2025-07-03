@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://soup.gd" id="2_jusf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hlgl"]
-size = Vector2(97.2945, 58.1023)
+size = Vector2(97.2945, 8.78835)
 
 [node name="Sprite2D" type="Sprite2D"]
 texture_filter = 1
@@ -16,7 +16,7 @@ script = ExtResource("2_jusf8")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.230457, 5.72306)
+position = Vector2(0.0901781, -27.1409)
 shape = SubResource("RectangleShape2D_5hlgl")
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Really Noodle"
-run/main_scene="res://Scenes/Game.tscn"
+run/main_scene="res://Scenes/control.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+
+[display]
+
+window/size/resizable=false
 
 [dotnet]
 
@@ -21,3 +25,7 @@ project/assembly_name="Really Noodle"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

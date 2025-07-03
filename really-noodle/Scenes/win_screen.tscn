@@ -1,0 +1,131 @@
+[gd_scene load_steps=17 format=3 uid="uid://1xi8t7twtd76"]
+
+[ext_resource type="Texture2D" uid="uid://dflhit8xak6at" path="res://Assets/Backgrounds/noodle wins end screen.png" id="1_ufimf"]
+[ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="2_4es7b"]
+[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="3_5adid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p5mg"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(0, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0to0b"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(900, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rswol"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(1800, 0, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cxaf"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(0, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpd7l"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(900, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5qaw"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(1800, 540, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyq5c"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(0, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nq0q"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(900, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d85bo"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(1800, 1080, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kntwc"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(0, 1620, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2wic"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(900, 1620, 900, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b70o"]
+atlas = ExtResource("1_ufimf")
+region = Rect2(1800, 1620, 900, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lrwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p5mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0to0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rswol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cxaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpd7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5qaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyq5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nq0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d85bo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kntwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2wic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b70o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Noodle_win__screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 525.0
+offset_top = 314.0
+offset_right = 525.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(48, 2)
+scale = Vector2(1.29212, 1.19879)
+sprite_frames = SubResource("SpriteFrames_1lrwx")
+autoplay = "default"
+frame_progress = 0.441475
+
+[node name="Control" parent="." instance=ExtResource("3_5adid")]
+layout_mode = 1
+offset_left = -525.0
+offset_top = 21.0
+offset_right = -525.0
+offset_bottom = 21.0
+
+[node name="Go back" parent="." instance=ExtResource("2_4es7b")]
+layout_mode = 1
+offset_left = 352.0
+offset_top = 168.0
+offset_right = 352.0
+offset_bottom = 168.0
+scale = Vector2(0.972727, 1.02658)

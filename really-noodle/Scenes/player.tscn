@@ -1,34 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuml4dhwphilt"]
+[gd_scene load_steps=10 format=3 uid="uid://cuml4dhwphilt"]
 
 [ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_d3o56"]
-[ext_resource type="Texture2D" uid="uid://b54cyc4igq0o3" path="res://Assets/Orc.png" id="2_61pwn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_47cx4"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7hyq"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(0, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6r2m"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(100, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tel1"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(200, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gf5g"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(300, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wybw1"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(400, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_glppr"]
-atlas = ExtResource("2_61pwn")
 region = Rect2(500, 200, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kqile"]

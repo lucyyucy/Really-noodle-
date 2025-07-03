@@ -1,17 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://cupc071sjfbm6"]
+[gd_scene load_steps=11 format=3 uid="uid://cupc071sjfbm6"]
 
 [ext_resource type="PackedScene" path="res://Sprites/soup.tscn" id="1_f7k3g"]
 [ext_resource type="PackedScene" uid="uid://bhoyltjemhf88" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
+
 [ext_resource type="PackedScene" uid="uid://leyb3qennu65" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
-[ext_resource type="PackedScene" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
+[ext_resource type="PackedScene" uid="uid://c511c370j5m5i" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
 [ext_resource type="PackedScene" uid="uid://dygh5xgiheo7o" path="res://Vegetable Sprites/corn.tscn" id="3_jen52"]
 [ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
 [ext_resource type="PackedScene" uid="uid://bbdrjiqgbl7be" path="res://Vegetable Sprites/onion.tscn" id="4_k755p"]
 [ext_resource type="PackedScene" uid="uid://t5m175cjmk4v" path="res://Vegetable Sprites/egg.tscn" id="5_c1xd0"]
+[ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="9_ek5dm"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Sprite2D" parent="." instance=ExtResource("1_f7k3g")]
+[node name="soup" parent="." instance=ExtResource("1_f7k3g")]
 position = Vector2(580, 316)
 
 [node name="bowl" parent="." instance=ExtResource("1_fyqvd")]
@@ -26,7 +28,7 @@ collision_mask = 2
 position = Vector2(-437, -134)
 
 [node name="broccoli" parent="." instance=ExtResource("2_o68v3")]
-position = Vector2(633, 108)
+position = Vector2(713, 284)
 
 [node name="corn" parent="." instance=ExtResource("3_jen52")]
 position = Vector2(537, 188)
@@ -36,3 +38,10 @@ position = Vector2(732, 424)
 
 [node name="egg" parent="." instance=ExtResource("5_c1xd0")]
 position = Vector2(438, 469)
+
+[node name="Go back" parent="." instance=ExtResource("9_ek5dm")]
+offset_left = 935.0
+offset_top = 518.0
+offset_right = 935.0
+offset_bottom = 518.0
+
