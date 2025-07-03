@@ -1,22 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://b271anid37eya"]
+[gd_scene load_steps=5 format=3 uid="uid://cupc071sjfbm6"]
 
-[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
-[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_2be5f"]
-[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
+[ext_resource type="PackedScene" uid="uid://leyb3qennu65" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
+[ext_resource type="Script" path="res://game.gd" id="3_abcde"]
+[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="4_xyz"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
 size = Vector2(1158.5, 20)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("3_abcde")
 
 [node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
 position = Vector2(206, 119)
 
-[node name="carrot" parent="." instance=ExtResource("2_2be5f")]
-position = Vector2(294, 256)
+[node name="chopsticks" parent="." instance=ExtResource("4_xyz")]
+position = Vector2(101, 150)
+scale = Vector2(1, 1)
 
-[node name="chopsticks" parent="." instance=ExtResource("3_kb68e")]
-position = Vector2(969, -161)
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
