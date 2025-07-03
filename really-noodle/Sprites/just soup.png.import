@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://bpw4at44tc7ga"
-=======
-uid="uid://cqr3nukmht36f"
->>>>>>> origin/caitlin2
-path="res://.godot/imported/just chopsticks.png-61453b34cb2cf995a063c7449d2161ff.ctex"
+uid="uid://fg56ef44fpo5"
+path="res://.godot/imported/just soup.png-0f824f419845560cf68770f1f508b0ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/just chopsticks.png"
-dest_files=["res://.godot/imported/just chopsticks.png-61453b34cb2cf995a063c7449d2161ff.ctex"]
+source_file="res://Sprites/just soup.png"
+dest_files=["res://.godot/imported/just soup.png-0f824f419845560cf68770f1f508b0ea.ctex"]
 
 [params]
 
