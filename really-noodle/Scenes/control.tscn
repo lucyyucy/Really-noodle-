@@ -1,8 +1,102 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6g6ah1rebedx"]
+[gd_scene load_steps=21 format=3 uid="uid://bu6i1q8lasujr"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_1jb0c"]
-[ext_resource type="Theme" uid="uid://dcr3uruatfdc6" path="res://Scenes/new_theme.tres" id="1_alelf"]
+[ext_resource type="Theme" uid="uid://d0l8aoyer8gfo" path="res://Scenes/new_theme.tres" id="1_alelf"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_w0jgv"]
 [ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="2_iamym"]
+[ext_resource type="Texture2D" uid="uid://c2yki58hnhqdm" path="res://Assets/Backgrounds/really noodle title screen animated.png" id="4_c4mpj"]
+[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="5_edbxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kuq4"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(0, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u04xb"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(300, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3untj"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(600, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liplt"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(0, 180, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp0o4"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(300, 180, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqe7f"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(600, 180, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6buit"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(0, 360, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxxep"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(300, 360, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_714fa"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(600, 360, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7hoe"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(0, 540, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp477"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(300, 540, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf58q"]
+atlas = ExtResource("4_c4mpj")
+region = Rect2(600, 540, 300, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqw3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kuq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u04xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3untj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liplt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp0o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqe7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6buit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxxep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_714fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7hoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp477")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf58q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_hajhu"]
 
@@ -16,42 +110,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1jb0c")
+script = ExtResource("1_w0jgv")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1163.0
-offset_bottom = 649.0
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -7
+position = Vector2(584.5, 325)
+scale = Vector2(3.88333, 3.61111)
+sprite_frames = SubResource("SpriteFrames_yqw3h")
+autoplay = "default"
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
-layout_mode = 0
-offset_left = 11.0
-offset_right = 1174.0
-offset_bottom = 636.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="MenuBar" type="MenuBar" parent="Panel"]
+[node name="MenuBar" type="MenuBar" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 110.0
-offset_top = 43.0
-offset_right = -137.0
-offset_bottom = -81.0
+offset_left = 125.0
+offset_top = 82.0
+offset_right = -122.0
+offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Panel/MenuBar"]
+[node name="Button" type="Button" parent="MenuBar"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.066
 anchor_top = 0.025
 anchor_right = 0.356
 anchor_bottom = 0.202
-offset_left = 293.544
-offset_top = 254.875
-offset_right = 293.904
-offset_bottom = 254.95
+offset_left = 251.27
+offset_top = 239.9
+offset_right = 251.63
+offset_bottom = 239.975
 theme = ExtResource("1_alelf")
 theme_override_colors/font_color = Color(0.560559, 0.484442, 0.240961, 1)
 theme_override_fonts/font = ExtResource("2_iamym")
@@ -61,13 +153,13 @@ text = "Start"
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="MenuButton" type="MenuButton" parent="Panel/MenuBar"]
+[node name="MenuButton" type="MenuButton" parent="MenuBar"]
 use_parent_material = true
 layout_mode = 0
-offset_left = 213.0
-offset_top = 318.0
-offset_right = 747.0
-offset_bottom = 487.0
+offset_left = 324.0
+offset_top = 358.0
+offset_right = 567.0
+offset_bottom = 434.0
 theme = SubResource("Theme_hajhu")
 theme_override_fonts/font = SubResource("FontVariation_wv35q")
 theme_override_font_sizes/font_size = 29
@@ -92,5 +184,12 @@ popup/item_7/id = 7
 popup/item_8/text = "Nine"
 popup/item_8/id = 8
 
-[connection signal="pressed" from="Panel/MenuBar/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Panel/MenuBar/MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="Control" parent="." instance=ExtResource("5_edbxm")]
+layout_mode = 1
+offset_left = 784.0
+offset_top = 390.0
+offset_right = 784.0
+offset_bottom = 390.0
+
+[connection signal="pressed" from="MenuBar/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuBar/MenuButton" to="." method="_on_menu_button_pressed"]

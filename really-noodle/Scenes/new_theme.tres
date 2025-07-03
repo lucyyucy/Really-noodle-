@@ -3,7 +3,7 @@
 [ext_resource type="StyleBox" path="res://Scenes/new_style_box_flat.tres" id="1_17c5u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkkx5"]
-bg_color = Color(0.773697, 0.62795, 0.548281, 1)
+bg_color = Color(0.420651, 0.555714, 0.353287, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
