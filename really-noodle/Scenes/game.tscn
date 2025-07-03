@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cupc071sjfbm6"]
 
-[ext_resource type="PackedScene" uid="uid://dambxyvcovytu" path="res://Sprites/soup.tscn" id="1_f7k3g"]
-[ext_resource type="PackedScene" uid="uid://cj3em2myxxu8m" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
+[ext_resource type="PackedScene" path="res://Sprites/soup.tscn" id="1_f7k3g"]
+[ext_resource type="PackedScene" uid="uid://bhoyltjemhf88" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
 [ext_resource type="PackedScene" uid="uid://leyb3qennu65" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
-[ext_resource type="PackedScene" uid="uid://c511c370j5m5i" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
+[ext_resource type="PackedScene" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
 [ext_resource type="PackedScene" uid="uid://dygh5xgiheo7o" path="res://Vegetable Sprites/corn.tscn" id="3_jen52"]
 [ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
 [ext_resource type="PackedScene" uid="uid://bbdrjiqgbl7be" path="res://Vegetable Sprites/onion.tscn" id="4_k755p"]

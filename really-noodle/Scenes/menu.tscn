@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjtf40vu2l6u6"]
+[gd_scene load_steps=12 format=3 uid="uid://cto226pu5b3q3"]
 
 [ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="1_0eyqb"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_hpgpy"]
