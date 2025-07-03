@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c511c370j5m5i"]
+[gd_scene load_steps=12 format=3 uid="uid://bpquuqf70bkcr"]
 
 [ext_resource type="Texture2D" uid="uid://dymbjxsmtf21y" path="res://Vegetable Sprites/pngs/broccoli.png" id="1_cuic7"]
+[ext_resource type="Script" path="res://Vegetable Sprites/corn.gd" id="1_seqe8"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_hjghi"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_l1g75"]
@@ -60,6 +61,7 @@ modifications/5 = SubResource("SkeletonModification2DLookAt_qabem")
 resource_local_to_scene = true
 
 [node name="Sprite2D" type="Node2D"]
+script = ExtResource("1_seqe8")
 
 [node name="SoftBody2D" type="Polygon2D" parent="."]
 position = Vector2(4, -2)
@@ -399,3 +401,7 @@ rotation = 1.06899
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 softness = 60.0
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(39.1576, 39.0007)
+scale = Vector2(4.12169, 4)

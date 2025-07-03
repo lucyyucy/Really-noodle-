@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bruuyk3d8gfpx"]
+[gd_scene load_steps=4 format=3 uid="uid://bruuyk3d8gfpx"]
 
 [ext_resource type="Script" path="res://ChopstickScripts/chopsticks.gd" id="1_8no3p"]
 [ext_resource type="Texture2D" uid="uid://b0ord0w4u6roc" path="res://Sprites/just chopsticks_scaled.png" id="2_5bhlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrb1d"]
-size = Vector2(113.679, 87.6045)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lly8r"]
-size = Vector2(93.6801, 77.4931)
+size = Vector2(96.4247, 185.799)
 
 [node name="chopsticks" type="CharacterBody2D"]
 position = Vector2(1.00002, -4.00002)
@@ -25,13 +22,7 @@ centered = false
 offset = Vector2(-700, -700)
 
 [node name="ChopstickCollision1" type="CollisionShape2D" parent="."]
-position = Vector2(4.24616, 33.9755)
+position = Vector2(-2.00717, 17.6873)
 rotation = -0.540504
 scale = Vector2(0.35, 0.35)
 shape = SubResource("RectangleShape2D_nrb1d")
-
-[node name="ChopstickCollision4" type="CollisionShape2D" parent="."]
-position = Vector2(-0.204969, -10.3558)
-rotation = -0.626666
-scale = Vector2(0.35, 0.35)
-shape = SubResource("RectangleShape2D_lly8r")

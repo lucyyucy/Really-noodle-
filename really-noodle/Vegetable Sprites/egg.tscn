@@ -469,3 +469,7 @@ rotation = -2.34238
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 softness = 60.0
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(39.1576, 39.0007)
+scale = Vector2(4.12169, 4)

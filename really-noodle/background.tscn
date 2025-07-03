@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqondlojah8rm"]
+
+[ext_resource type="Texture2D" uid="uid://b2d2f202yd4om" path="res://Sprites/really noodle game background.png" id="1_n7vbs"]
+
+[node name="Node2D" type="Sprite2D"]
+texture = ExtResource("1_n7vbs")

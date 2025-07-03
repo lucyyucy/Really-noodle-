@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dambxyvcovytu"]
+[gd_scene load_steps=4 format=3 uid="uid://b4cqf2atat277"]
 
 [ext_resource type="Texture2D" uid="uid://fg56ef44fpo5" path="res://Sprites/just soup.png" id="1_8cmb4"]
 [ext_resource type="Script" path="res://soup.gd" id="2_jusf8"]
