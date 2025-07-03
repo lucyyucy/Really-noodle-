@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bruuyk3d8gfpx"]
+[gd_scene load_steps=7 format=3 uid="uid://bruuyk3d8gfpx"]
 
+[ext_resource type="Script" path="res://ChopstickScripts/chopsticks.gd" id="1_8no3p"]
 [ext_resource type="Texture2D" uid="uid://dbfwqf2a2e4os" path="res://Sprites/ai-generated-bamboo-chopsticks-free-png.png" id="1_rqyhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrb1d"]
@@ -15,34 +16,38 @@ size = Vector2(38.4585, 1256.67)
 size = Vector2(1070.36, 40.8708)
 
 [node name="chopsticks" type="Node2D"]
-position = Vector2(-1, 2.38419e-07)
-rotation = -0.558944
+position = Vector2(1.00002, -4.00002)
+rotation = -1.57952
 scale = Vector2(0.502057, 0.587654)
+script = ExtResource("1_8no3p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7, -2)
 texture = ExtResource("1_rqyhm")
+centered = false
+offset = Vector2(-160, -800)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2, 2)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="ChopstickCollision1" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(14.6266, 18.6571)
+[node name="ChopstickCollision1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(591.703, -289.235)
 rotation = -0.523599
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nrb1d")
 
-[node name="ChopstickCollision2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(115.464, -19.9654)
+[node name="ChopstickCollision2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(692.54, -327.857)
 rotation = -2.0944
+scale = Vector2(1, 1)
 skew = 0.0366516
 shape = SubResource("RectangleShape2D_dtbbw")
 
-[node name="ChopstickCollision3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-101.072, -47.8582)
+[node name="ChopstickCollision3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(476.004, -355.75)
 rotation = 0.98262
 shape = SubResource("RectangleShape2D_iyjs6")
 
-[node name="ChopstickCollision4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-13.9767, -86.1187)
+[node name="ChopstickCollision4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(563.099, -394.01)
 rotation = -0.567232
 shape = SubResource("RectangleShape2D_lly8r")
