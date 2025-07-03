@@ -1,25 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://b271anid37eya"]
+[gd_scene load_steps=10 format=3 uid="uid://cupc071sjfbm6"]
 
-[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
-[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_2be5f"]
+[ext_resource type="PackedScene" path="res://Sprites/soup.tscn" id="1_f7k3g"]
+[ext_resource type="PackedScene" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
+[ext_resource type="PackedScene" uid="uid://leyb3qennu65" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
+[ext_resource type="PackedScene" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
+[ext_resource type="PackedScene" uid="uid://dygh5xgiheo7o" path="res://Vegetable Sprites/corn.tscn" id="3_jen52"]
 [ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
+[ext_resource type="PackedScene" uid="uid://bbdrjiqgbl7be" path="res://Vegetable Sprites/onion.tscn" id="4_k755p"]
+[ext_resource type="PackedScene" uid="uid://t5m175cjmk4v" path="res://Vegetable Sprites/egg.tscn" id="5_c1xd0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
 size = Vector2(1158.5, 20)
 
 [node name="Game" type="Node2D"]
 
-[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
-position = Vector2(206, 119)
+[node name="Sprite2D" parent="." instance=ExtResource("1_f7k3g")]
+position = Vector2(580, 316)
 
-[node name="carrot" parent="." instance=ExtResource("2_2be5f")]
-position = Vector2(294, 256)
+[node name="bowl" parent="." instance=ExtResource("1_fyqvd")]
+position = Vector2(578, 326)
+
+[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
+position = Vector2(-437, -134)
+
+[node name="broccoli" parent="." instance=ExtResource("2_o68v3")]
+position = Vector2(633, 108)
+
+[node name="corn" parent="." instance=ExtResource("3_jen52")]
+position = Vector2(537, 188)
+
+[node name="onion" parent="." instance=ExtResource("4_k755p")]
+position = Vector2(732, 424)
+
+[node name="egg" parent="." instance=ExtResource("5_c1xd0")]
+position = Vector2(438, 469)
 
 [node name="chopsticks" parent="." instance=ExtResource("3_kb68e")]
-position = Vector2(969, -161)
+position = Vector2(606, 61)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-313, 405)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(239, 528)
+shape = SubResource("RectangleShape2D_gvftq")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-555, 322)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(97, 431)
+rotation = 0.875996
+shape = SubResource("RectangleShape2D_gvftq")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-1552, 808)
+rotation = -0.886866
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(582, 629)
 shape = SubResource("RectangleShape2D_gvftq")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu47okdsrr4bt"
-path="res://.godot/imported/Asparagus2.png-c110ef5cc8b8232587d09231aec69067.ctex"
+uid="uid://dymbjxsmtf21y"
+path="res://.godot/imported/broccoli.png-3044c66e2ee4f95d04a486596265e668.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asparagus2.png"
-dest_files=["res://.godot/imported/Asparagus2.png-c110ef5cc8b8232587d09231aec69067.ctex"]
+source_file="res://Vegetable Sprites/pngs/broccoli.png"
+dest_files=["res://.godot/imported/broccoli.png-3044c66e2ee4f95d04a486596265e668.ctex"]
 
 [params]
 
