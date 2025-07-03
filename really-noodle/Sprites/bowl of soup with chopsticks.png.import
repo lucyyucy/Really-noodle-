@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dymbjxsmtf21y"
-path="res://.godot/imported/brocolli(1).png-37226286638030fb0639765a1090c7b0.ctex"
+uid="uid://d4apmtut4bejv"
+path="res://.godot/imported/bowl of soup with chopsticks.png-63cdc4cc444f95dabbdebc761ba02972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vegetable Sprites/pngs/brocolli(1).png"
-dest_files=["res://.godot/imported/brocolli(1).png-37226286638030fb0639765a1090c7b0.ctex"]
+source_file="res://Sprites/bowl of soup with chopsticks.png"
+dest_files=["res://.godot/imported/bowl of soup with chopsticks.png-63cdc4cc444f95dabbdebc761ba02972.ctex"]
 
 [params]
 

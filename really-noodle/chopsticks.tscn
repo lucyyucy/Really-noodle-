@@ -20,8 +20,9 @@ rotation = -0.558944
 scale = Vector2(0.502057, 0.587654)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -2)
+position = Vector2(6.54608, -2.52336)
 texture = ExtResource("1_rqyhm")
+offset = Vector2(1.465, 0)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(2, 2)
