@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dygh5xgiheo7o"]
+
+[ext_resource type="Texture2D" uid="uid://c86xdxebpskr3" path="res://Vegetable Sprites/corn.png" id="1_qbyvj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxyja"]
+radius = 34.805
+height = 79.2
+
+[node name="corn" type="Sprite2D"]
+position = Vector2(-76.9961, -57.0007)
+scale = Vector2(-0.945, 1)
+texture = ExtResource("1_qbyvj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_hxyja")

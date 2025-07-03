@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b271anid37eya"]
+
+[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
+[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_2be5f"]
+[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
+size = Vector2(1158.5, 20)
+
+[node name="Game" type="Node2D"]
+
+[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
+position = Vector2(206, 119)
+
+[node name="carrot" parent="." instance=ExtResource("2_2be5f")]
+position = Vector2(294, 256)
+
+[node name="chopsticks" parent="." instance=ExtResource("3_kb68e")]
+position = Vector2(969, -161)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(582, 629)
+shape = SubResource("RectangleShape2D_gvftq")
