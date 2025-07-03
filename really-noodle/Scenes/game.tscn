@@ -1,21 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://b271anid37eya"]
+[gd_scene load_steps=10 format=3 uid="uid://b271anid37eya"]
 
-[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
-[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_2be5f"]
-[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
+[ext_resource type="PackedScene" uid="uid://b0lb415y3utey" path="res://Scenes/noodle.tscn" id="1_jgrf7"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_we8ib"]
+[ext_resource type="PackedScene" uid="uid://1wf3rojcx33r" path="res://Vegetable Sprites/carrot.tscn" id="2_rrmsl"]
+[ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_xqaox"]
+[ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="5_6im26"]
+[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="6_afa4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
 size = Vector2(1158.5, 20)
 
-[node name="Game" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8yue"]
+bg_color = Color(0.595406, 0.985954, 0.554637, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 
-[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
+[sub_resource type="Theme" id="Theme_3jpn3"]
+Button/styles/normal = SubResource("StyleBoxFlat_g8yue")
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_we8ib")
+
+[node name="Noodle" parent="." instance=ExtResource("1_jgrf7")]
 position = Vector2(206, 119)
 
-[node name="carrot" parent="." instance=ExtResource("2_2be5f")]
+[node name="carrot" parent="." instance=ExtResource("2_rrmsl")]
 position = Vector2(294, 256)
 
-[node name="chopsticks" parent="." instance=ExtResource("3_kb68e")]
+[node name="chopsticks" parent="." instance=ExtResource("3_xqaox")]
 position = Vector2(969, -161)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -23,3 +38,23 @@ position = Vector2(969, -161)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(582, 629)
 shape = SubResource("RectangleShape2D_gvftq")
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 949.0
+offset_top = 28.0
+offset_right = 1134.0
+offset_bottom = 97.0
+theme = SubResource("Theme_3jpn3")
+theme_override_colors/font_color = Color(0.0139886, 0.00874272, 0.0195248, 1)
+theme_override_fonts/font = ExtResource("5_6im26")
+theme_override_font_sizes/font_size = 23
+text = "Restart
+"
+
+[node name="Control" parent="." instance=ExtResource("6_afa4i")]
+offset_left = 799.0
+offset_top = 360.0
+offset_right = 799.0
+offset_bottom = 360.0
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
