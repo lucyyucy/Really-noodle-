@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://im8hnue4bcke"
-path="res://.godot/imported/just chopsticks.png-61453b34cb2cf995a063c7449d2161ff.ctex"
+uid="uid://cu47okdsrr4bt"
+path="res://.godot/imported/Asparagus2.png-c110ef5cc8b8232587d09231aec69067.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/just chopsticks.png"
-dest_files=["res://.godot/imported/just chopsticks.png-61453b34cb2cf995a063c7449d2161ff.ctex"]
+source_file="res://Asparagus2.png"
+dest_files=["res://.godot/imported/Asparagus2.png-c110ef5cc8b8232587d09231aec69067.ctex"]
 
 [params]
 

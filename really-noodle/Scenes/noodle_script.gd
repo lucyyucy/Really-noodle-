@@ -4,8 +4,6 @@ extends Node2D
 @export var max_speed := 200.0
 @export var drag := 5.0  # higher = more resistance
 
-
-
 var velocity := Vector2.ZERO
 
 func _physics_process(delta):
