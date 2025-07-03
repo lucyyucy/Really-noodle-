@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsby744cmpelu"]
+[gd_scene load_steps=8 format=3 uid="uid://dsby744cmpelu"]
 
 [ext_resource type="Texture2D" uid="uid://bobiul1ogu6nx" path="res://Assets/Backgrounds/really noodle background-12.png.png" id="1_l6fgx"]
 [ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="2_308dq"]
+[ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="2_xx1kh"]
+[ext_resource type="FontFile" uid="uid://b4sa3dughquqt" path="res://Assets/Font/ublogame-font/Ublogame-yYpj2.otf" id="3_37p2j"]
+[ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="3_q45fw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xea7m"]
+font = ExtResource("2_xx1kh")
+font_size = 37
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nalul"]
+line_spacing = 7.0
+font = ExtResource("3_37p2j")
+font_size = 28
+font_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="How to play" type="Control"]
 layout_mode = 3
@@ -13,28 +27,47 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 9.0
-offset_right = 902.0
-offset_bottom = 549.0
+offset_top = 2.0
+offset_right = 900.0
+offset_bottom = 542.0
 scale = Vector2(1.27973, 1.19568)
 texture = ExtResource("1_l6fgx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 135.0
+offset_top = 105.0
+offset_right = 574.0
+offset_bottom = 264.0
+scale = Vector2(1.73644, 1.69311)
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "How to Play:
+"
+label_settings = SubResource("LabelSettings_xea7m")
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "It is a battle of chopstiocks and noodles.
+How to win: 
+Noodle: Kick out all the veges and be the last survivor.
+Chopsticks: Get the doodly noodle and victory is yours.
+Controls:
+Noodle: Arrow keys			         Chopsticks: Mouse"
+label_settings = SubResource("LabelSettings_nalul")
 
 [node name="Exit button" parent="." instance=ExtResource("2_308dq")]
 layout_mode = 1
-offset_left = -58.0
-offset_top = 360.0
-offset_right = -58.0
-offset_bottom = 360.0
-scale = Vector2(0.945947, 0.986694)
+offset_left = -79.0
+offset_top = 367.0
+offset_right = -79.0
+offset_bottom = 367.0
+scale = Vector2(0.956336, 0.986694)
+
+[node name="Go back" parent="." instance=ExtResource("3_q45fw")]
+layout_mode = 1
+offset_left = 873.0
+offset_top = 492.0
+offset_right = 873.0
+offset_bottom = 492.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cupc071sjfbm6"]
+[gd_scene load_steps=11 format=3 uid="uid://cupc071sjfbm6"]
 
 [ext_resource type="PackedScene" uid="uid://dambxyvcovytu" path="res://Sprites/soup.tscn" id="1_f7k3g"]
 [ext_resource type="PackedScene" uid="uid://cj3em2myxxu8m" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
 [ext_resource type="PackedScene" uid="uid://bbdrjiqgbl7be" path="res://Vegetable Sprites/onion.tscn" id="4_k755p"]
 [ext_resource type="PackedScene" uid="uid://t5m175cjmk4v" path="res://Vegetable Sprites/egg.tscn" id="5_c1xd0"]
+[ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="9_ek5dm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvftq"]
 size = Vector2(1158.5, 20)
@@ -60,3 +61,9 @@ rotation = -0.886866
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(582, 629)
 shape = SubResource("RectangleShape2D_gvftq")
+
+[node name="Go back" parent="." instance=ExtResource("9_ek5dm")]
+offset_left = 935.0
+offset_top = 518.0
+offset_right = 935.0
+offset_bottom = 518.0
