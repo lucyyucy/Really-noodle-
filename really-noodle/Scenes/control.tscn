@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://bu6i1q8lasujr"]
 
-[ext_resource type="Theme" uid="uid://d0l8aoyer8gfo" path="res://Scenes/new_theme.tres" id="1_alelf"]
+[ext_resource type="Theme" uid="uid://dcr3uruatfdc6" path="res://Scenes/new_theme.tres" id="1_alelf"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_w0jgv"]
 [ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="2_iamym"]
 [ext_resource type="Texture2D" uid="uid://c2yki58hnhqdm" path="res://Assets/Backgrounds/really noodle title screen animated.png" id="4_c4mpj"]
