@@ -18,7 +18,13 @@ func _process(delta: float) -> void:
 
 
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+#func _on_area_2d_body_exited(body: Node2D) -> void:
+	#if body.name == ("egg"):
+		#egg.get_child(0).gravity_scale = -0.03
+	#
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	noodle.get_child(0).gravity_scale = 0.3
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.1).timeout
 	noodle.get_child(0).gravity_scale = 0.02

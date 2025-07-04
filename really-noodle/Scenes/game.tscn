@@ -1,22 +1,118 @@
-[gd_scene load_steps=11 format=3 uid="uid://cupc071sjfbm6"]
+[gd_scene load_steps=29 format=3 uid="uid://cupc071sjfbm6"]
 
 [ext_resource type="PackedScene" uid="uid://dambxyvcovytu" path="res://Sprites/soup.tscn" id="1_f7k3g"]
 [ext_resource type="PackedScene" uid="uid://bhoyltjemhf88" path="res://Sprites/bowl.tscn" id="1_fyqvd"]
 [ext_resource type="PackedScene" uid="uid://leyb3qennu65" path="res://Scenes/noodle.tscn" id="1_nvd8m"]
+[ext_resource type="Texture2D" uid="uid://0qpf1pppvshy" path="res://Sprites/just soup animated (3).png" id="2_emrmj"]
 [ext_resource type="PackedScene" uid="uid://c511c370j5m5i" path="res://Vegetable Sprites/broccoli.tscn" id="2_o68v3"]
 [ext_resource type="PackedScene" uid="uid://dygh5xgiheo7o" path="res://Vegetable Sprites/corn.tscn" id="3_jen52"]
 [ext_resource type="PackedScene" uid="uid://bruuyk3d8gfpx" path="res://chopsticks.tscn" id="3_kb68e"]
 [ext_resource type="PackedScene" uid="uid://bbdrjiqgbl7be" path="res://Vegetable Sprites/onion.tscn" id="4_k755p"]
 [ext_resource type="PackedScene" uid="uid://t5m175cjmk4v" path="res://Vegetable Sprites/egg.tscn" id="5_c1xd0"]
+[ext_resource type="Script" path="res://Vegetable Sprites/broccoli.gd" id="6_v1xie"]
 [ext_resource type="Texture2D" uid="uid://clkndi7vtth6s" path="res://Sprites/really noodle game background.png" id="9_p8v8f"]
 [ext_resource type="Script" path="res://Scenes/control.gd" id="10_a1b75"]
+[ext_resource type="PackedScene" uid="uid://stfuxjfjht03" path="res://Scenes/Timer.tscn" id="12_017gw"]
+[ext_resource type="PackedScene" uid="uid://dxhx1ta8ianlp" path="res://killzone.tscn" id="12_ayjuj"]
+[ext_resource type="PackedScene" uid="uid://djxsn10erp00w" path="res://Scenes/lifezone.tscn" id="13_cd7qq"]
+[ext_resource type="Script" path="res://Scenes/lifezone.gd" id="15_yviah"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhuop"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(0, 0, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbrcx"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(104, 0, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10rso"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(208, 0, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mvi3"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(0, 104, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2ggx"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(104, 104, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8glp"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(208, 104, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbcg4"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(0, 208, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vs1k"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(104, 208, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogjnq"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(208, 208, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rae3"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(0, 312, 104, 104)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms3po"]
+atlas = ExtResource("2_emrmj")
+region = Rect2(104, 312, 104, 104)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgv53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhuop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbrcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10rso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mvi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2ggx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8glp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbcg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vs1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogjnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rae3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms3po")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="Game" type="Node2D"]
 
 [node name="soup" parent="." instance=ExtResource("1_f7k3g")]
 top_level = true
-position = Vector2(580, 302)
+position = Vector2(578, 306)
 scale = Vector2(9, 6.542)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="soup"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cgv53")
+autoplay = "default"
 
 [node name="bowl" parent="." instance=ExtResource("1_fyqvd")]
 top_level = true
@@ -27,12 +123,13 @@ scale = Vector2(9, 6.542)
 position = Vector2(606, 61)
 collision_mask = 2
 
-[node name="Noodle" parent="." instance=ExtResource("1_nvd8m")]
-position = Vector2(795, -396)
+[node name="Noodle" parent="." groups=["noodle"] instance=ExtResource("1_nvd8m")]
+position = Vector2(699, 297)
 rotation = 1.39626
 
 [node name="broccoli" parent="." instance=ExtResource("2_o68v3")]
 position = Vector2(647, 367)
+script = ExtResource("6_v1xie")
 
 [node name="corn" parent="." instance=ExtResource("3_jen52")]
 position = Vector2(537, 188)
@@ -63,6 +160,8 @@ position = Vector2(576, 324)
 scale = Vector2(6.22703, 6.23077)
 texture = ExtResource("9_p8v8f")
 
+[node name="Timer" parent="." instance=ExtResource("12_017gw")]
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -74,7 +173,18 @@ script = ExtResource("10_a1b75")
 
 [node name="Home_button" type="Button" parent="Control"]
 z_index = -1
+layout_mode = 0
 offset_right = 119.0
 offset_bottom = 99.0
 
+[node name="killzone" parent="." node_paths=PackedStringArray("allowed_objects") instance=ExtResource("12_ayjuj")]
+position = Vector2(2, 10)
+allowed_objects = [NodePath("../chopsticks"), NodePath("../broccoli"), NodePath("../corn"), NodePath("../onion"), NodePath("../broccoli2"), NodePath("../corn2"), NodePath("../onion2"), NodePath("../egg2"), NodePath("../egg")]
+
+[node name="veggiekillzone" parent="." node_paths=PackedStringArray("veggies") instance=ExtResource("13_cd7qq")]
+position = Vector2(33, 20)
+script = ExtResource("15_yviah")
+veggies = [NodePath("../broccoli"), NodePath("../corn"), NodePath("../onion"), NodePath("../broccoli2"), NodePath("../corn2"), NodePath("../onion2"), NodePath("../egg2"), NodePath("../egg")]
+
 [connection signal="pressed" from="Control/Home_button" to="Control" method="_on_home_button_pressed"]
+[connection signal="body_entered" from="veggiekillzone" to="veggiekillzone" method="_on_body_entered"]

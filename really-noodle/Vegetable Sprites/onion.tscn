@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bbdrjiqgbl7be"]
+[gd_scene load_steps=15 format=3 uid="uid://bbdrjiqgbl7be"]
 
 [ext_resource type="Texture2D" uid="uid://belttx2c5dqdv" path="res://Vegetable Sprites/pngs/onion.png" id="1_vegna"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_hlef7"]
@@ -82,6 +82,9 @@ modifications/8 = SubResource("SkeletonModification2DLookAt_yujkg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_723e6"]
 resource_local_to_scene = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_icnvv"]
+radius = 4.12311
 
 [node name="onion" type="Node2D"]
 
@@ -626,3 +629,12 @@ rotation = -2.07134
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 softness = 60.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 0.001
+gravity_scale = 0.0
+sleeping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(37, 25)
+shape = SubResource("CircleShape2D_icnvv")

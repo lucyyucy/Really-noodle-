@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlyamyqkobuy3" path="res://Sprites/empty bowl (1).png" id="1_s0f4f"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_csdbv"]
-a = Vector2(13.8848, 8.43476)
+a = Vector2(6.40139, 9.42708)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_yhump"]
 b = Vector2(2.06814, 38.3844)
@@ -43,7 +43,7 @@ a = Vector2(2.61466, -8.68284)
 b = Vector2(0, 24.8081)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_x4e3t"]
-a = Vector2(-8.83576, 8.18668)
+a = Vector2(-5.7703, 9.30299)
 b = Vector2(-0.360649, 10.0473)
 
 [node name="Sprite2D" type="Sprite2D"]
@@ -59,7 +59,7 @@ position = Vector2(45.5312, -37.8324)
 shape = SubResource("SegmentShape2D_csdbv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-47.6951, -28.5293)
+position = Vector2(-47.695, -28.4053)
 shape = SubResource("SegmentShape2D_yhump")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -100,7 +100,7 @@ scale = Vector2(1, 0.975961)
 shape = SubResource("SegmentShape2D_ew7jc")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-46.1623, -37.0881)
+position = Vector2(-46.1623, -37.2122)
 shape = SubResource("SegmentShape2D_x4e3t")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]

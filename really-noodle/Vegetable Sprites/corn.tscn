@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dygh5xgiheo7o"]
+[gd_scene load_steps=17 format=3 uid="uid://dygh5xgiheo7o"]
 
 [ext_resource type="Texture2D" uid="uid://dn70pwac3d2ik" path="res://Vegetable Sprites/pngs/corn.png" id="1_feljs"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_nyr26"]
@@ -99,6 +99,9 @@ modifications/10 = SubResource("SkeletonModification2DLookAt_q1k3o")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6p6q"]
 resource_local_to_scene = true
 size = Vector2(24, 24)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4sok2"]
+radius = 4.12311
 
 [node name="corn" type="Node2D"]
 position = Vector2(-76.9961, -57.0007)
@@ -771,3 +774,12 @@ rotation = -3.27343
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 softness = 60.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 0.001
+gravity_scale = 0.0
+sleeping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(37, 25)
+shape = SubResource("CircleShape2D_4sok2")

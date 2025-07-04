@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://b5km2tq6a3vy8"]
 
 [ext_resource type="Texture2D" uid="uid://dhr60j2uhfkbh" path="res://Assets/Backgrounds/chopsticks wins end screen.png" id="1_fwvvx"]
-[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="2_w66e1"]
+[ext_resource type="PackedScene" path="res://Scenes/Exit_button.tscn" id="2_w66e1"]
 [ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="3_b4rr3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksfcu"]
@@ -91,7 +91,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vtdvs")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
 "speed": 10.0
 }]

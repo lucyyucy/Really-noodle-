@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1sdl5ynhg48y"]
+
+[ext_resource type="AudioStream" uid="uid://bdyl1w853b57i" path="res://Really Noodle song.mp3" id="1_12oh0"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_12oh0")
+autoplay = true
+parameters/looping = true

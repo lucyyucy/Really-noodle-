@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdyl1w853b57i"
+path="res://.godot/imported/Really Noodle song.mp3-e816a0f5eefe37cfa4bea28eaa1103a2.mp3str"
+
+[deps]
+
+source_file="res://Really Noodle song.mp3"
+dest_files=["res://.godot/imported/Really Noodle song.mp3-e816a0f5eefe37cfa4bea28eaa1103a2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
