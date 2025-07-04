@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dsby744cmpelu"]
 
 [ext_resource type="Texture2D" uid="uid://bobiul1ogu6nx" path="res://Assets/Backgrounds/really noodle background-12.png.png" id="1_l6fgx"]
-[ext_resource type="PackedScene" uid="uid://dddmei0niib4q" path="res://Scenes/Exit_button.tscn" id="2_308dq"]
+[ext_resource type="PackedScene" path="res://Scenes/Exit_button.tscn" id="2_308dq"]
 [ext_resource type="FontFile" uid="uid://dwfkc142ryw6k" path="res://Assets/Font/super-pixel-font/SuperPixel-m2L8j.ttf" id="2_xx1kh"]
 [ext_resource type="FontFile" uid="uid://b4sa3dughquqt" path="res://Assets/Font/ublogame-font/Ublogame-yYpj2.otf" id="3_37p2j"]
 [ext_resource type="PackedScene" uid="uid://cbbb2exdqmpyx" path="res://Scenes/go_back.tscn" id="3_q45fw"]
@@ -49,10 +49,10 @@ label_settings = SubResource("LabelSettings_xea7m")
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "It is a battle of chopstiocks and noodles.
+text = "It is a battle of chopsticks and noodles.
 How to win: 
-Noodle: Kick out all the veges and be the last survivor.
-Chopsticks: Get the doodly noodle and victory is yours.
+Noodle: Be the last noodle in the bowl.
+Chopsticks: Eat the noodle and victory is yours.
 Controls:
 Noodle: Arrow keys			         Chopsticks: Mouse"
 label_settings = SubResource("LabelSettings_nalul")
